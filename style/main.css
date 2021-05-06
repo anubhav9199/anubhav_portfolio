@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.inner-box{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #515151;
+    color: #515151;
+    width: 1342px;
+    height: 925px;
+    left: 49px;
+    top: 49px;
+
+    border-radius: 100px;
+}
