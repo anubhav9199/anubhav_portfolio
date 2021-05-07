@@ -49,26 +49,6 @@ nav {
     bottom: 47.14%;
 }
 
-.inner-box-intro {
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
-    background: #515151;
-    color: #515151;
-    width: auto;
-    height: auto;
-    left: 25px;
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-
-    border-radius: 50px;
-}
-
-
 .my-text {
     font-family: Epilogue;
 }
@@ -109,10 +89,10 @@ nav {
 
 .intro-image {
     position: absolute;
-    left: 52.38%;
+    left: 60.38%;
     right: 0%;
-    top: 6.38%;
-    bottom: 0.65%;
+    top: 13%;
+    bottom: 0%;
 }
 
 .cv-btn {
@@ -127,14 +107,15 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #292929;
-    color: #FFFFFF;
+    background-color: #ffffff;
+    color: #000000;
 
     border-radius: 50px;
 }
 
 .cv-btn:hover {
     background-color: #131313;
+    color: #ffffff;
     transition: all ease 0.5s;
 }
 
@@ -152,25 +133,6 @@ nav {
     background-repeat: no-repeat;
 }
 
-.inner-box-service {
-    position: absolute;
-    width: 1342px;
-    height: 925px;
-    left: 49px;
-    top: 1072px;
-
-    background: #515151;
-    color: #515151;
-    width: auto;
-    height: auto;
-    left: 25px;
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-
-    border-radius: 50px;
-}
-
 #current-work {
     display: flex;
     align-items: center;
@@ -183,25 +145,6 @@ nav {
     background-size: 1330px;
     background-position: right bottom;
     background-repeat: no-repeat;
-}
-
-.inner-box-current-work {
-    position: absolute;
-    width: 1342px;
-    height: 925px;
-    left: 49px;
-    top: 2095px;
-
-    background: #515151;
-    color: #515151;
-    width: auto;
-    height: auto;
-    left: 25px;
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-
-    border-radius: 50px;
 }
 
 #project {
@@ -218,25 +161,6 @@ nav {
     background-repeat: no-repeat;
 }
 
-.inner-box-project {
-    position: absolute;
-    width: 1342px;
-    height: 925px;
-    left: 49px;
-    top: 3118px;
-
-    background: #515151;
-    color: #515151;
-    width: auto;
-    height: auto;
-    left: 25px;
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-
-    border-radius: 50px;
-}
-
 #about {
     display: flex;
     align-items: center;
@@ -251,25 +175,6 @@ nav {
     background-repeat: no-repeat;
 }
 
-.inner-box-about {
-    position: absolute;
-    width: 1342px;
-    height: 925px;
-    left: 49px;
-    top: 4141px;
-
-    background: #515151;
-    color: #515151;
-    width: auto;
-    height: auto;
-    left: 25px;
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-
-    border-radius: 50px;
-}
-
 #touch {
     display: flex;
     align-items: center;
@@ -282,24 +187,5 @@ nav {
     background-size: 1330px;
     background-position: right bottom;
     background-repeat: no-repeat;
-}
-
-.inner-box-touch {
-    position: absolute;
-    width: 1342px;
-    height: 925px;
-    left: 49px;
-    top: 5164px;
-
-    background: #515151;
-    color: #515151;
-    width: auto;
-    height: auto;
-    left: 25px;
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-
-    border-radius: 50px;
 }
 
