@@ -1,52 +1,24 @@
-@charset "utf-8";
-
 body {
-    margin: 0px;
-    padding: 0px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: rgba(0, 0, 0, 0.8);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-family: Epilogue;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    box-sizing: border-box;
-    padding: 10px 50px;
-    background-color: transparent;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.05);
-    z-index: 1;
+    height: 100vh;
+    background-color: #000;
+    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent), radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
 }
 
-#main {
+#home {
+    align-items: center;
+    position: center;
     padding: 30px 50px;
     position: relative;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background-size: 1330px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
 }
 
-.navbar-offset {
-    top: 37px;
-}
-
-.logo {
-    position: absolute;
-    left: 4.43%;
-    right: 47.62%;
-    top: 10.14%;
-    bottom: 47.14%;
+canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 .my-text {
@@ -55,10 +27,12 @@ nav {
 
 .intro-text1 {
     position: absolute;
-    left: 3.43%;
-    right: 47.62%;
+    left: 39.50%;
+    right: 34%;
     top: 12.14%;
     bottom: 47.14%;
+    align-items: center;
+    text-align: center;
 
     font-style: normal;
     font-weight: normal;
@@ -67,15 +41,17 @@ nav {
     display: flex;
     align-items: center;
 
-    color: #969696;
+    color: #ffffff;
 }
 
 .intro-text2 {
     position: absolute;
-    left: 3.43%;
-    right: 47.62%;
+    left: 26%;
+    right: 25%;
     top: 37.14%;
     bottom: 47.14%;
+    align-items: center;
+    text-align: center;
 
     font-style: normal;
     font-weight: 600;
@@ -84,23 +60,17 @@ nav {
     display: flex;
     align-items: center;
 
-    color: #000000;
-}
-
-.intro-image {
-    position: absolute;
-    left: 60.38%;
-    right: 0%;
-    top: 13%;
-    bottom: 0%;
+    color: #969696;
 }
 
 .cv-btn {
     position: absolute;
-    left: 3.43%;
-    right: 47.62%;
+    left: 41.30%;
+    right: 43%;
     top: 55.14%;
     bottom: 47.14%;
+    align-items: center;
+    text-align: center;
 
     width: 200px;
     height: 45px;
@@ -119,73 +89,137 @@ nav {
     transition: all ease 0.5s;
 }
 
-#service {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 5% 0px 5%;
-    position: relative;
+nav {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: #1b242f;
+    border-bottom: 3px solid #04c2c9;
+    height: 50px;
+    text-align: left;
     width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    background-size: 1330px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
+    z-index: 99;
 }
 
-#current-work {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 5% 0px 5%;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    background-size: 1330px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
+/* nav.fixed {
+    bottom: inherit;
+    left: 0;
+    position: fixed;
+    top: 0;
 }
 
-#project {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 5% 0px 5%;
-    position: relative;
+nav.fixed.desk {
+    animation: popDown 0.5s;
+}
+
+nav .link-wrap {
+    background: #333;
+    height: 0;
+    max-width: 1200px;
+    overflow: hidden;
+    position: absolute;
+    top: 53px;
+    transition: height 0.3s ease-out;
     width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    background-size: 1330px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
+}
+
+nav .link-wrap.visible {
+    height: 220px;
+}
+
+nav .link-wrap div {
+    cursor: pointer;
+    font-size: 12pt;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+
+nav .link-wrap div:first-child {
+    padding: 25px 20px 12px 20px;
+}
+
+nav .link-wrap div:hover {
+    color: #e31b6d;
+}
+
+nav .mdi-menu {
+    font-size: 30pt;
+    line-height: 36pt;
+    margin: auto 0;
+    position: absolute;
+    right: 5vw;
+    top: 0;
+}
+
+nav .active {
+    color: #e31b6d;
+} */
+
+
+
+.about-header {
+    align-items: center;
+    text-align: center;
 }
 
 #about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 5% 0px 5%;
-    position: relative;
+    background: #000000;
+    color: #ffffff;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background-size: 1330px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-}
-
-#touch {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 50px 5% 0px 5%;
     position: relative;
+}
+
+#services {
+    width:100%;
+    height:100vh;
+    box-sizing: border-box;
+    font-family: calibri;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+
+}
+
+#current-project {
+    background: #000000;
+    color: #ffffff;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background-size: 1330px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 5% 0px 5%;
+    position: relative;
 }
 
+#open-source {
+    background: #000000;
+    color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 5% 0px 5%;
+    position: relative;
+}
+
+#contact {
+    background: #000000;
+    color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 5% 0px 5%;
+    position: relative;
+}
