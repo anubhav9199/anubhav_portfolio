@@ -4,7 +4,7 @@
         <title>Anubhav Sharma</title>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />      
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
@@ -13,47 +13,55 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style/style.css"/>
+        <link rel="stylesheet" type="text/css" href="style/main.css"/>
         <link rel="shortcut icon" href="#"/>
         <link
             href="fonts/mdi/css/materialdesignicons.min.css"
             media="all"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800"
+            rel="stylesheet"
+            type="text/css"
+        />
         <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <!-- Home -->
-        <section id="home" class="home">
-            
-            <div>
-                <canvas></canvas>    
-                <p class="my-text intro-text1">
-                    I'm Anubhav
-                </p>
-                <p class="my-text intro-text2">
-                    I'm a backend developer and server architect
-                </p>
-                <a href="#" class="cv-btn">Download Cv</a>
-                <nav id="header-nav" class="">
-                <div class="">
-                    <div class="" dest="home">Home</div>
-                    <div class="" dest="about">About</div>
-                    <div class="" dest="services">Services</div>
-                    <div class="" dest="current-project">Current Project</div>
-                    <div class="" dest="open-source">Open Source</div>
-                    <div class="" dest="contact">Contact</div>
+        <section id="home" class="flex height-fix">
+            <canvas></canvas>
+            <div class="flex">
+                <div class="text intro-div">
+                    <center class="my-text intro-text1">Hello, I'm Anubhav Sharma</center>
+                    <center class="my-text intro-text2">I'm a backend developer and server architect</center>
                 </div>
-                <i class=""></i>
+                <div class="page-link">
+                    <center>
+                        <div>
+                            <a href="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/downloadable/Anubhav_Sharma.pdf"  class="cv-btn" download="anubhav_sharma.pdf">Download CV</a>
+                        </div>
+                    </center>
+                </div>
+                <nav class="flex">
+                    <div class="link-wrap">
+                        <div class="active page-link" dest="home">home</div>
+                        <div class="page-link" dest="about">about</div>
+                        <div class="page-link" dest="services">Services</div>
+                        <div class="page-link" dest="current-project">Projects</div>
+                        <div class="page-link" dest="open-source">Open Sourse</div>
+                        <div class="page-link" dest="contact">contact</div>
+                    </div>
+                    <i class="mdi mdi-menu"></i>
                 </nav>
             </div>
-            
+
         </section>
 
         <!-- About -->
         <section id="about">
-            <div >
+            <div>
                 <h1 class="my-text about-header">About</h1>
             </div>
         </section>
@@ -80,15 +88,15 @@
         </section>
         
         <!-- Contact -->
-        <section id="contact">
-            <div>
+        <footer id="contact">
+            <div class="inline-div">
                 <h1 class="my-text about-header">Contact</h1>
             </div>
-        </section>
-        
+
+        </footer>
     </body>
     
 </html>
 <script src="script/canvas.js"></script>
-
-
+<script src="script/model.js"></script>
+<script src="script/index.js"></script>
