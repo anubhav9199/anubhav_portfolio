@@ -119,6 +119,27 @@
     }
 }
 
+@keyframes textIn {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes textOut {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+
+    }
+}
+
 .flex {
     align-items: center;
     display: flex;
@@ -216,7 +237,8 @@ body {
     width: auto;
     height: auto;
     background-color: #000;
-    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent), radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+    background-image: radial-gradient(circle at top right, #000, transparent),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
 }
 
 #home {
@@ -234,32 +256,72 @@ canvas {
     height: 100%;
 }
 
-.intro-div{
+.intro-div,
+.intro-div-heading,
+.intro-div-subheading {
     align-items: center;
-    padding: 20px;
+    padding-bottom: 8px;
 }
 
 .my-text {
-    font-family: Epilogue;
+    font-family: 'Sen';
 }
 
 .intro-text1 {
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 24px;
     line-height: 41px;
     word-wrap: normal;
     color: #ffffff;
+    padding: 0px;
 }
 
 .intro-text2 {
     font-style: normal;
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 51px;
-    color: #969696;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 80px;
+    color: #fff;
     word-wrap: normal;
+    /* padding-bottom: 24px; */
 }
+
+.intro-text3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 80px;
+    color: #fff;
+    word-wrap: normal;
+    padding-bottom: 24px;
+}
+
+.intro-text3 p span {
+    font-size: 28px;
+    color: #61c7a2;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 46px;
+    display: none;
+}
+
+.intro-text3 p span.text-in {
+    display: block;
+    animation: textIn .5s ease;
+}
+
+.intro-text3 p span.text-out {
+    animation: textOut .5s ease;
+}
+
+.txt-type > .txt {
+    box-shadow: 0.2rem solid #777;
+}
+
+/* .span-div {
+    display: block;
+} */
 
 .cv-btn {
     align-self: center;
@@ -268,16 +330,33 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000;
+    color: #fff;
     position: relative;
     border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 0 0 0;
+    transition: box-shadow 250ms ease;
+    /* border-color: #fff;
+    border-width: 2px; */
+    border: 2px solid #fff;
+}
+
+.btn-text {
+    align-self: center;
+    text-align: center;
+    text-decoration-color: #000;
+    font-size: 16px bold;
+    font-weight: 700;
+
 }
 
 .cv-btn:hover {
-    background-color: #131313;
+    /* background-color: #283655;
     color: #ffffff;
-    transition: all ease 0.5s;
+    transition: all ease 0.3s; */
+    box-shadow: 0 4px 12px 0 #173E6C, 0 -4px 12px 0 #176C4D, inset 0 1px 0 0 hsl(0deg 0% 100% / 20%);
+    border: 0px solid #fff;
 }
 
 
@@ -285,12 +364,15 @@ nav {
     bottom: 0;
     left: 0;
     position: absolute;
-    background: #1b242f;
-    border-bottom: 3px solid #04c2c9;
+    background: #1e1f26;
+    /* border-bottom: 3px solid #d0e1f9; */
     height: 50px;
-    text-align: left;
+    /* text-align: left; */
     width: 100%;
     z-index: 99;
+    color: #9b9b9c;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 nav.fixed {
@@ -305,11 +387,7 @@ nav.fixed.desk {
 }
 
 nav .link-wrap {
-    background: #333;
-    height: 0;
     max-width: 1200px;
-    overflow: hidden;
-    position: absolute;
     top: 53px;
     transition: height 0.3s ease-out;
     width: 100%;
@@ -332,7 +410,7 @@ nav .link-wrap div:first-child {
 }
 
 nav .link-wrap div:hover {
-    color: #e31b6d;
+    color: #fff;
 }
 
 nav .mdi-menu {
@@ -345,68 +423,95 @@ nav .mdi-menu {
 }
 
 nav .active {
-    color: #e31b6d;
+    color: #fff;
+    /* box-shadow: 0 4px 12px 0 #173E6C, 0 -4px 12px 0 #176C4D, inset 0 1px 0 0 hsl(0deg 0% 100% / 20%); */
 }
 
-/* .about-header {
+#about {
+    color: #fff;
+    background-color: #283655;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 50px 5% 0px 5%;
+    position: relative;
+}
+
+.about-header {
     align-items: center;
     text-align: center;
 }
 
-#about {
-    color: #ffffff;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
+div .about-container {
+    width: 50%;
     display: flex;
-    justify-content: space-between;
-    padding: 50px 5% 0px 5%;
-    position: relative;
-} */
+}
+
 
 #services {
-    color: #ffffff;
+    color: #fff;
+    background-color: #d0e1f9;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    display: flex;
     justify-content: space-between;
     padding: 50px 5% 0px 5%;
     position: relative;
 
+}
+
+.services-header {
+    align-items: center;
+    text-align: center;
 }
 
 #current-project {
-    color: #ffffff;
+    color: #fff;
+    background-color: #283655;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    display: flex;
     justify-content: space-between;
     padding: 50px 5% 0px 5%;
     position: relative;
+}
+
+.current-project-header {
+    align-items: center;
+    text-align: center;
 }
 
 #open-source {
-    color: #ffffff;
+    color: #fff;
+    background-color: #d0e1f9;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    display: flex;
     justify-content: space-between;
     padding: 50px 5% 0px 5%;
     position: relative;
 }
 
+.open-source-header {
+    align-items: center;
+    text-align: center;
+}
+
 #contact {
-    color: #ffffff;
+    color: #fff;
+    background-color: #283655;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    display: flex;
     justify-content: space-between;
     padding: 50px 5% 0px 5%;
     position: relative;
+}
+
+.contact-header {
+    align-items: center;
+    text-align: center;
 }
 
 @media screen and (max-width: 400px) {
@@ -488,7 +593,7 @@ nav .active {
         height: initial;
         overflow: visible;
         position: initial;
-        text-align: left;
+        text-align: center;
     }
 
     nav .link-wrap .visible {

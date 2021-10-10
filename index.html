@@ -26,6 +26,7 @@
             type="text/css"
         />
         <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sen">
     </head>
 
     <body>
@@ -33,25 +34,37 @@
         <section id="home" class="flex height-fix">
             <canvas></canvas>
             <div class="flex">
-                <div class="text intro-div">
-                    <center class="my-text intro-text1">Hello, I'm Anubhav Sharma</center>
-                    <center class="my-text intro-text2">I'm a backend developer and server architect</center>
+                <div class="text intro-div-heading">
+                    <center class="my-text intro-text1">Namesta🙏, I'm Anubhav Sharma</center>
+                </div>
+                <div class="text intro-div-subheading">
+                    <center class="my-text intro-text2">I build what you don't see.</center>
+                    <!-- <center><div class="my-text intro-text3">AKA <span class="my-text txt-type" data-wait="3000" data-words='["A Backend Developer", "A Server Architect", "A ML Engineer", "A Data Analyst", "An Open Source Contributer"]'></span></div></center> -->
+                    <center><div class="my-text intro-text3">
+                         <p class="my-text animate-text">
+                            AKA <span class="my-text">A Backend Developer</span>
+                            <span class="my-text">A Server Architect</span>
+                            <span class="my-text">A ML Engineer</span>
+                            <span class="my-text">A Data Analyst</span>
+                            <span class="my-text">An Open Source Contributer</span>
+                        </p>
+                    </div></center>
                 </div>
                 <div class="page-link">
                     <center>
                         <div>
-                            <a href="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/downloadable/Anubhav_Sharma.pdf"  class="cv-btn" download="anubhav_sharma.pdf">Download CV</a>
+                            <a href="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/downloadable/Anubhav_Sharma.pdf"  class="cv-btn" download="anubhav_sharma.pdf"><p class="my-text btn-text">Download CV</p></a>
                         </div>
                     </center>
                 </div>
                 <nav class="flex">
                     <div class="link-wrap">
-                        <div class="active page-link" dest="home">home</div>
-                        <div class="page-link" dest="about">about</div>
-                        <div class="page-link" dest="services">Services</div>
-                        <div class="page-link" dest="current-project">Projects</div>
-                        <div class="page-link" dest="open-source">Open Sourse</div>
-                        <div class="page-link" dest="contact">contact</div>
+                        <div class="active page-link my-text" dest="home">home</div>
+                        <div class="page-link my-text" dest="about">about</div>
+                        <div class="page-link my-text" dest="services">Services</div>
+                        <div class="page-link my-text" dest="current-project">Projects</div>
+                        <div class="page-link my-text" dest="open-source">Open Sourse</div>
+                        <div class="page-link my-text" dest="contact">contact</div>
                     </div>
                     <i class="mdi mdi-menu"></i>
                 </nav>
@@ -61,36 +74,44 @@
 
         <!-- About -->
         <section id="about">
+            <div class="about-header animated slide-in-left">
+                <h1 class="my-text">About</h1>
+            </div>
             <div>
-                <h1 class="my-text about-header">About</h1>
+                <div class="about-container container w3-show-inline-block">
+                    <p>this is inline block</p>
+                </div>
+                <div class="about-container container w3-show-inline-block">
+                    <p>this is inline block</p>
+                </div>
             </div>
         </section>
 
         <!-- Services -->
         <section id="services">
-            <div>
-                <h1 class="my-text about-header">Here's How can i help you!</h1>
+            <div class="services-header animated slide-in-right">
+                <h1 class="my-text">Here's How can i help you!</h1>
             </div>
         </section>
 
         <!-- Current Project -->
         <section id="current-project">
-            <div>
-                <h1 class="my-text about-header">Current Project</h1>
+            <div class="current-project-header animated slide-in-left">
+                <h1 class="my-text">Current Project</h1>
             </div>
         </section>
 
         <!-- Open Source -->
         <section id="open-source">
-            <div>
-                <h1 class="my-text about-header">Open Source</h1>
+            <div class="open-source-header animated slide-in-right">
+                <h1 class="my-text">Open Source</h1>
             </div>
         </section>
         
         <!-- Contact -->
         <footer id="contact">
-            <div class="inline-div">
-                <h1 class="my-text about-header">Contact</h1>
+            <div class="contact-header animated slide-in-left">
+                <h1 class="my-text">Contact</h1>
             </div>
 
         </footer>
