@@ -301,13 +301,12 @@ canvas {
     font-size: 28px;
     color: #61c7a2;
     font-weight: 700;
-    display: inline-block;
-    line-height: 46px;
     display: none;
+    line-height: 46px;
 }
 
 .intro-text3 p span.text-in {
-    display: block;
+    display: inline-block;
     animation: textIn .5s ease;
 }
 
