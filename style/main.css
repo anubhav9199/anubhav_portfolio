@@ -346,7 +346,7 @@ canvas {
 
 .intro-text3 {
     text-align: center;
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     font-size: 28px;
     line-height: 80px;
@@ -358,6 +358,7 @@ canvas {
 .intro-text3 p span {
     font-size: 28px;
     color: #61c7a2;
+    /* color: #173E6C #176C4D; */
     font-weight: 700;
     display: none;
     line-height: 46px;
@@ -380,6 +381,10 @@ canvas {
 /* .span-div {
     display: block;
 } */
+
+.button-div {
+    text-align: center;
+}
 
 .cv-btn {
     align-self: center;
