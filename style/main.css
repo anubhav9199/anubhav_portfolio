@@ -255,15 +255,14 @@
 }
 
 .header {
-    color: #444649;
-    font-family: "raleway-bold";
+    color: #fff;
     font-size: 25pt;
     position: relative;
     position: relative;
 }
 
 .header-bar {
-    background: #444649;
+    background: #fff;
     height: 4px;
     margin: 25px 0 75px 0;
     width: 70px;
@@ -492,23 +491,13 @@ nav .active {
 
 #about {
     color: #fff;
-    background-color: #283655;
+    background-color: #000;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
     justify-content: space-between;
     padding: 50px 5% 0px 5%;
     position: relative;
-}
-
-.about-header {
-    align-items: center;
-    text-align: center;
-}
-
-div .about-container {
-    width: 50%;
-    display: flex;
 }
 
 
@@ -654,9 +643,12 @@ div .about-container {
     nav .link-wrap {
         background: none;
         height: initial;
-        overflow: visible;
+        overflow: hidden;
         position: initial;
         text-align: center;
+        left: 0;
+        right: 0;
+        display: block;
     }
 
     nav .link-wrap .visible {
@@ -789,7 +781,7 @@ div .about-container {
 
 @media screen and (min-width: 960px) {
     .waypoint {
-        opacity: 0;
+        opacity: 100;
     }
 
     .animated.waypoint#gallery {

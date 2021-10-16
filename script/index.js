@@ -1,32 +1,3 @@
-const txts=document.querySelector(".animate-text").children, txtsLen=txts.length;
-let index=0;
-const textInTimer=3000, textOutTimer=2800;
-
-function animateText() {
-  for(let i=0; i<txtsLen; i++){
-    txts[i].classList.remove("text-in","text-out");  
-  }
-  
-  txts[index].classList.add("text-in");
-
-  setTimeout(function(){
-    if(index == txtsLen-1){
-      index=0;
-    } else {
-      index++;
-    }
-    
-    animateText();
-  },textInTimer);
-
-  setTimeout(function(){
-    txts[index].classList.add("text-out");
-  },textOutTimer)
- 
-}
-         
-window.onload=animateText;
-
 // const TypeWriter = function(txtElement, words, wait = 3000) {
 //   this.txtElement = txtElement;
 //   this.words = words;
@@ -110,9 +81,9 @@ $(function() {
   }
 
   // RESIZE RESETS
-  $(window).resize(function() {
-    posFilterBar($('.filter').first());
-  });
+  // $(window).resize(function() {
+  //   posFilterBar($('.filter').first());
+  // });
 
   // Sticky Nav on Mobile
   if (isMobile) {
@@ -120,6 +91,35 @@ $(function() {
   } else {
     $('nav').addClass('desk');
   }
+
+  const txts=document.querySelector(".animate-text").children, txtsLen=txts.length;
+  let index=0;
+  const textInTimer=3000, textOutTimer=2800;
+
+  function animateText() {
+    for(let i=0; i<txtsLen; i++){
+      txts[i].classList.remove("text-in","text-out");  
+    }
+    
+    txts[index].classList.add("text-in");
+
+    setTimeout(function(){
+      if(index == txtsLen-1){
+        index=0;
+      } else {
+        index++;
+      }
+      
+      animateText();
+    },textInTimer);
+
+    setTimeout(function(){
+      txts[index].classList.add("text-out");
+    },textOutTimer)
+  
+  }
+          
+  window.onload=animateText;
 
   // NAV POSITION
   var navPos = $('nav').position().top;
@@ -148,21 +148,21 @@ $(function() {
     if (pos2 > $('#about').offset().top) {
       highlightLink('about');
     }
-    if (pos2 > $('#services').offset().top) {
-      highlightLink('services');
-    }
-    if (pos2 > $('#current-project').offset().top) {
-      highlightLink('current-project');
-    }
-    if (pos2 > $('#open-source').offset().top) {
-      highlightLink('open-source');
-    }
-    if (
-      pos2 > $('#contact').offset().top ||
-      pos + $(window).height() === $(document).height()
-    ) {
-      highlightLink('contact');
-    }
+    // if (pos2 > $('#services').offset().top) {
+    //   highlightLink('services');
+    // }
+    // if (pos2 > $('#current-project').offset().top) {
+    //   highlightLink('current-project');
+    // }
+    // if (pos2 > $('#open-source').offset().top) {
+    //   highlightLink('open-source');
+    // }
+    // if (
+    //   pos2 > $('#contact').offset().top ||
+    //   pos + $(window).height() === $(document).height()
+    // ) {
+    //   highlightLink('contact');
+    // }
 
     // Prevent Hover on Scroll
     clearTimeout(lockTimer);
@@ -217,11 +217,11 @@ $(function() {
     }
   );
 
-  posFilterBar($('.filter').first());
+  // posFilterBar($('.filter').first());
 
-  $('.filter').click(function() {
-    posFilterBar(this);
-  });
+  // $('.filter').click(function() {
+  //   posFilterBar(this);
+  // });
 
   function posFilterBar(elem) {
     var origin = $(elem)
