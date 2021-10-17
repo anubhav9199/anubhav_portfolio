@@ -1,3 +1,12 @@
+/* @font-face {
+    font-family: Sen;
+    src: url(https://fonts.googleapis.com/css?family=Sen) format('woff'),
+        url(https://fonts.googleapis.com/css?family=Sen) format('eot');
+    font-weight: 800;
+    font-style: normal;
+    font-display: fallback;
+} */
+
 @keyframes flipInX {
     from {
         -webkit-animation-timing-function: ease-in;
@@ -121,7 +130,7 @@
 
 @keyframes textIn {
     0% {
-        transform: translateY(100%);
+        transform: translateY(-100%);
     }
 
     100% {
@@ -135,7 +144,7 @@
     }
 
     100% {
-        transform: translateY(-100%);
+        transform: translateY(100%);
 
     }
 }
