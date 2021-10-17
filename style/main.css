@@ -570,6 +570,48 @@ nav .active {
     section:nth-of-type(3) #gallery .mix .card {
         width: 100vw;
     }
+
+    .intro-text1 {
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        word-wrap: normal;
+        color: #ffffff;
+        padding: 0px;
+    }
+
+    .intro-text2 {
+        text-align: center;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 55px;
+        color: #fff;
+        word-wrap: normal;
+        /* padding-bottom: 24px; */
+    }
+
+    .intro-text3 {
+        text-align: center;
+        font-style: bold;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 40px;
+        color: #fff;
+        word-wrap: normal;
+        padding-bottom: 24px;
+    }
+
+    .intro-text3 p span {
+        font-size: 26px;
+        color: #61c7a2;
+        /* color: #173E6C #176C4D; */
+        font-weight: 700;
+        display: none;
+        line-height: 23px;
+    }
 }
 
 @media screen and (min-width: 600px) {
