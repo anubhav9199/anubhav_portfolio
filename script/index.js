@@ -1,97 +1,67 @@
-const txts=document.querySelector(".animate-text").children,
-               txtsLen=txts.length;
-           let index=0;
-          const textInTimer=3000,
-                textOutTimer=2800;
+// const TypeWriter = function(txtElement, words, wait = 3000) {
+//   this.txtElement = txtElement;
+//   this.words = words;
+//   this.txt = '';
+//   this.wordIndex = 0;
+//   this.wait = parseInt(wait, 10);
+//   this.type();
+//   this.isDeleting = false;
+// }
 
-         function animateText() {
-            for(let i=0; i<txtsLen; i++){
-              txts[i].classList.remove("text-in","text-out");  
-            }
-            txts[index].classList.add("text-in");
+// // Type Method
+// TypeWriter.prototype.type = function() {
+//   // Current index of word
+//   const current = this.wordIndex % this.words.length;
+//   // Get full text of current word
+//   const fullTxt = this.words[current];
 
-            setTimeout(function(){
-                txts[index].classList.add("text-out");              
-            },textOutTimer)
+//   // Check if deleting
+//   if(this.isDeleting) {
+//     // Remove char
+//     this.txt = fullTxt.substring(0, this.txt.length - 1);
+//   } else {
+//     // Add char
+//     this.txt = fullTxt.substring(0, this.txt.length + 1);
+//   }
 
-            setTimeout(function(){
+//   // Insert txt into element
+//   this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-              if(index == txtsLen-1){
-                  index=0;
-                }
-               else{
-                   index++;
-                 }
-                animateText();
-            },textInTimer); 
-         }
-         
-         window.onload=animateText;
+//   // Initial Type Speed
+//   let typeSpeed = 100;
 
-const TypeWriter = function(txtElement, words, wait = 3000) {
-  this.txtElement = txtElement;
-  this.words = words;
-  this.txt = '';
-  this.wordIndex = 0;
-  this.wait = parseInt(wait, 10);
-  this.type();
-  this.isDeleting = false;
-}
+//   if(this.isDeleting) {
+//     typeSpeed /= 2;
+//   }
 
-// Type Method
-TypeWriter.prototype.type = function() {
-  // Current index of word
-  const current = this.wordIndex % this.words.length;
-  // Get full text of current word
-  const fullTxt = this.words[current];
+//   // If word is complete
+//   if(!this.isDeleting && this.txt === fullTxt) {
+//     // Make pause at end
+//     typeSpeed = this.wait;
+//     // Set delete to true
+//     this.isDeleting = true;
+//   } else if(this.isDeleting && this.txt === '') {
+//     this.isDeleting = false;
+//     // Move to next word
+//     this.wordIndex++;
+//     // Pause before start typing
+//     typeSpeed = 300;
+//   }
 
-  // Check if deleting
-  if(this.isDeleting) {
-    // Remove char
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    // Add char
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
+//   setTimeout(() => this.type(), typeSpeed);
+// }
 
-  // Insert txt into element
-  this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+// // Init On DOM Load
+// document.addEventListener('DOMContentLoaded', init);
 
-  // Initial Type Speed
-  let typeSpeed = 100;
-
-  if(this.isDeleting) {
-    typeSpeed /= 2;
-  }
-
-  // If word is complete
-  if(!this.isDeleting && this.txt === fullTxt) {
-    // Make pause at end
-    typeSpeed = this.wait;
-    // Set delete to true
-    this.isDeleting = true;
-  } else if(this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    // Move to next word
-    this.wordIndex++;
-    // Pause before start typing
-    typeSpeed = 300;
-  }
-
-  setTimeout(() => this.type(), typeSpeed);
-}
-
-// Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
-
-// Init App
-function init() {
-  const txtElement = document.querySelector('.txt-type');
-  const words = JSON.parse(txtElement.getAttribute('data-words'));
-  const wait = txtElement.getAttribute('data-wait');
-  // Init TypeWriter
-  new TypeWriter(txtElement, words, wait);
-}
+// // Init App
+// function init() {
+//   const txtElement = document.querySelector('.txt-type');
+//   const words = JSON.parse(txtElement.getAttribute('data-words'));
+//   const wait = txtElement.getAttribute('data-wait');
+//   // Init TypeWriter
+//   new TypeWriter(txtElement, words, wait);
+// }
 
 
 $(function() {
@@ -111,9 +81,9 @@ $(function() {
   }
 
   // RESIZE RESETS
-  $(window).resize(function() {
-    posFilterBar($('.filter').first());
-  });
+  // $(window).resize(function() {
+  //   posFilterBar($('.filter').first());
+  // });
 
   // Sticky Nav on Mobile
   if (isMobile) {
@@ -122,59 +92,88 @@ $(function() {
     $('nav').addClass('desk');
   }
 
-  // NAV POSITION
-  var navPos = $('nav').position().top;
-  var lastPos = 0;
-  var lockTimer;
+  const txts=document.querySelector(".animate-text").children, txtsLen=txts.length;
+  let index=0;
+  const textInTimer=3000, textOutTimer=2800;
 
-  $(window).on('scroll', function() {
-    var pos = $(window).scrollTop();
-    var pos2 = pos + 50;
-    var scrollBottom = pos + $(window).height();
-
-    if (!isMobile) {
-      if (pos >= navPos + $('nav').height() && lastPos < pos) {
-        $('nav').addClass('fixed');
-      }
-      if (pos < navPos && lastPos > pos) {
-        $('nav').removeClass('fixed');
-      }
-      lastPos = pos;
+  function animateText() {
+    for(let i=0; i<txtsLen; i++){
+      txts[i].classList.remove("text-in","text-out");  
     }
+    
+    txts[index].classList.add("text-in");
+
+    setTimeout(function(){
+      if(index == txtsLen-1){
+        index=0;
+      } else {
+        index++;
+      }
+      
+      animateText();
+    },textInTimer);
+
+    setTimeout(function(){
+      txts[index].classList.add("text-out");
+    },textOutTimer)
+  
+  }
+          
+  window.onload=animateText;
+
+  // NAV POSITION
+  // var navPos = $('nav').position().top;
+  // var lastPos = 0;
+  // var lockTimer;
+
+  // $(window).on('scroll', function() {
+  //   var pos = $(window).scrollTop();
+  //   var pos2 = pos + 50;
+  //   var scrollBottom = pos + $(window).height();
+
+  //   if (!isMobile) {
+  //     if (pos >= navPos + $('nav').height() && lastPos < pos) {
+  //       $('nav').addClass('fixed');
+  //     }
+  //     if (pos < navPos && lastPos > pos) {
+  //       $('nav').removeClass('fixed');
+  //     }
+  //     lastPos = pos;
+  //   }
 
     // Link Highlighting
-    if (pos2 > $('#home').offset().top) {
-      highlightLink('home');
-    }
-    if (pos2 > $('#about').offset().top) {
-      highlightLink('about');
-    }
-    if (pos2 > $('#services').offset().top) {
-      highlightLink('services');
-    }
-    if (pos2 > $('#current-project').offset().top) {
-      highlightLink('current-project');
-    }
-    if (pos2 > $('#open-source').offset().top) {
-      highlightLink('open-source');
-    }
-    if (
-      pos2 > $('#contact').offset().top ||
-      pos + $(window).height() === $(document).height()
-    ) {
-      highlightLink('contact');
-    }
+    // if (pos2 > $('#home').offset().top) {
+    //   highlightLink('home');
+    // }
+    // if (pos2 > $('#about').offset().top) {
+    //   highlightLink('about');
+    // }
+    // if (pos2 > $('#services').offset().top) {
+    //   highlightLink('services');
+    // }
+    // if (pos2 > $('#current-project').offset().top) {
+    //   highlightLink('current-project');
+    // }
+    // if (pos2 > $('#open-source').offset().top) {
+    //   highlightLink('open-source');
+    // }
+    // if (
+    //   pos2 > $('#contact').offset().top ||
+    //   pos + $(window).height() === $(document).height()
+    // ) {
+    //   highlightLink('contact');
+    // }
 
     // Prevent Hover on Scroll
-    clearTimeout(lockTimer);
-    if (!$('body').hasClass('disable-hover')) {
-      $('body').addClass('disable-hover');
-    }
+  //   clearTimeout(lockTimer);
+  //   if (!$('body').hasClass('disable-hover')) {
+  //     $('body').addClass('disable-hover');
+  //   }
 
-    lockTimer = setTimeout(function() {
-      $('body').removeClass('disable-hover');
-    }, 500);
-  });
+  //   lockTimer = setTimeout(function() {
+  //     $('body').removeClass('disable-hover');
+  //   }, 500);
+  // });
 
   function highlightLink(anchor) {
     $('nav .active').removeClass('active');
@@ -218,11 +217,11 @@ $(function() {
     }
   );
 
-  posFilterBar($('.filter').first());
+  // posFilterBar($('.filter').first());
 
-  $('.filter').click(function() {
-    posFilterBar(this);
-  });
+  // $('.filter').click(function() {
+  //   posFilterBar(this);
+  // });
 
   function posFilterBar(elem) {
     var origin = $(elem)
