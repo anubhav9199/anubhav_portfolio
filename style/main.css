@@ -444,7 +444,7 @@ nav .active {
 
 div .about-container {
     width: 50%;
-    display: flex;
+    display: inline-block;
 }
 
 
