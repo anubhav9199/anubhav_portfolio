@@ -14,6 +14,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 
         <!-- local assets -->
         <link rel="stylesheet" type="text/css" href="style/main.css"/>
@@ -59,23 +61,26 @@
                         <a href="downloadable/Anubhav_Sharma.pdf"  class="cv-btn" download="anubhav_sharma" target="blank" role="button"><p class="my-text btn-text">Download CV</p></a>
                     </div>
                 </div>
-                <!-- <nav class="flex">
+                <nav class="flex">
                     <div class="link-wrap">
-                        <div class="active page-link my-text" dest="home">home</div>
-                        <div class="page-link my-text" dest="about">about</div>
+                        <div class="active page-link my-text justify-content-center" dest="home">
+                            <!-- My Logo image for the home button will implement when thinks for the new version. -->
+                            <!-- <image class="image-home img-fluid rounded-circle" src="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/favicon.ico"></image> -->
+                            Home
+                        </div>
+                        <div class="page-link my-text" dest="about">About</div>
                         <div class="page-link my-text" dest="services">Services</div>
                         <div class="page-link my-text" dest="current-project">Projects</div>
-                        <div class="page-link my-text" dest="open-source">Open Sourse</div>
+                        <!-- <div class="page-link my-text" dest="open-source">Open Source</div> -->
                         <div class="page-link my-text" dest="contact">contact</div>
                     </div>
                     <i class="mdi mdi-menu"></i>
-                </nav> -->
+                </nav>
             </div>
-
         </section>
 
         <!-- About -->
-        <!-- <section id="about">
+        <section id="about">
             <div class="container flex">
                 <div class="header waypoint my-text" data-animation="slide-in-left">
                     ABOUT
@@ -85,22 +90,338 @@
                     data-animation="slide-in-left"
                     data-delay=".5s"
                 ></div>
-            </div>        
-        </section> -->
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class='col-6' style="border-radius: 10%; border: 5px solid #1e1f26;">
+                        <div class="div-header waypoint my-text row container-header" data-animation="slide-in-left" data-delay="1.5s">
+                            Who is this guy?
+                        </div>
+                        <br/>
+                        <div class="row flex waypoint" data-animation="slide-in-left" data-delay="1.5s">
+                            <image class="image-about-main img-fluid rounded-circle" src="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/images/about_main.png"></image>
+                        </div>
+
+                        <div class="row flex waypoint" data-animation="slide-in-left" data-delay="1.5s">
+                            <div class="col flex">
+                                <p class="my-text short-intro_text">I am backend engineer from Kota, Rajasthan, India. I have a searious passion with server-side tech stack also love to solve problems with logics and work with major deployment tools like DevOps, Docker and good at designing and developing API with handling of databases.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-6 skills-container'>
+                        <div class="div-header waypoint my-text row container-header" data-animation="slide-in-right" data-delay="1.5s">
+                            Skills he has<span class="down-animate-arrow" style="width:auto;">⬇</span>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <div class="row flex waypoint" data-animation="slide-in-right" data-delay="1.5s">
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:90%">
+                                <div class="tag bold flex">CSS</div>
+                                </div>
+                                <span>90%</span>
+                            </div>
+
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:90%">
+                                <div class="tag bold flex">HTML</div>
+                                </div>
+                                <span>90%</span>
+                            </div>
+
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:80%">
+                                <div class="tag bold flex">React</div>
+                                </div>
+                                <span>80%</span>
+                            </div>
+
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:80%">
+                                <div class="tag bold flex">JavaScript</div>
+                                </div>
+                                <span>80%</span>
+                            </div>
+
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:50%">
+                                <div class="tag bold flex">Angular</div>
+                                </div>
+                                <span>50%</span>
+                            </div>
+
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:65%">
+                                <div class="tag bold flex">Node.js</div>
+                                </div>
+                                <span>65%</span>
+                            </div>
+
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:65%">
+                                <div class="tag bold flex">Ruby/Rails</div>
+                                </div>
+                                <span>65%</span>
+                            </div>
+
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:50%">
+                                <div class="tag bold flex">UI Design</div>
+                                </div>
+                                <span>50%</span>
+                            </div>
+
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:60%">
+                                <div class="tag bold flex">Photoshop</div>
+                                </div>
+                                <span>60%</span>
+                            </div>
+
+                            <div class="bar flex">
+                                <div class="bar fill" style="width:50%">
+                                <div class="tag bold flex">Sketch</div>
+                                </div>
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Services -->
-        <!-- <section id="services">
-            <div class="services-header animated slide-in-right">
-                <h1 class="my-text">Here's How can i help you!</h1>
+        <section id="services">
+            <div class="container flex">
+                <div class="header waypoint my-text" data-animation="slide-in-right">
+                    SERVICES
+                </div>
+                <div
+                    class="header-bar waypoint"
+                    data-animation="slide-in-right"
+                    data-delay=".5s"
+                ></div>
             </div>
-        </section> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 service-card-container">
+                        <div class="card" data-effect="zoom">
+                            <figure  class="card__image">
+                                <img src="https://thumbs.dreamstime.com/z/programmer-desktop-computer-screen-code-vector-illustration-flat-cartoon-programming-pc-coding-workplace-idea-155213838.jpg" alt="Short description">
+                            </figure>
+                            <div class="card__header">
+                                <div class="card__profile">
+                                    <img src="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/images/console_logo.svg" alt="Short description">
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__name">Backend Development</h3>
+                                <p class="card__bio"> AI set the foundation for long-term stability, performance, and predictability. Using the latest tools and methodologies, I continuously produce high-quality code that is easy to maintain and scale. In a nutshell: I'm your backend.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 service-card-container">
+                        <div class="card" data-effect="zoom">
+                            <figure  class="card__image">
+                                <img src="https://lh6.googleusercontent.com/sRosaSuGe4idPmFWohgQHq1iWdXyUPvyx9ZcDWA6u38hxC6d7sg9cJCE7EPUlpON3Yn4BP2eydj4LM7raXmH9Y1B_rEP-KsRHFF0kgARiAQvt-7oNpjcr_daG_lxmlpLPjq7_hVY=s0" alt="Short description">
+                            </figure>
+                            <div class="card__header">
+                                <figure class="card__profile">
+                                    <img src="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/images/devops.svg" alt="Short description">
+                                </figure>
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__name">DevOps</h3>
+                                <p class="card__bio"> Sometimes you just want to Netflix and chill, but other times you want to deliver software at high velocity to mercilessly beat down your competition. Yeah, I'm the guy that sets up your infrastructure and deployment processes for fun... and um well profit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 service-card-container">
+                        <div class="card" data-effect="zoom">
+                            <figure  class="card__image">
+                                <img src="https://t3.ftcdn.net/jpg/02/02/45/26/360_F_202452662_ktufZ1jDNYYhVPptpB647yEO3ahQzila.jpg" alt="Short description">
+                            </figure>
+                            <div class="card__header">
+                                <figure class="card__profile">
+                                    <img src="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/images/servers.svg" alt="Short description">
+                                </figure>
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__name">Server Architecture</h3>
+                                <p class="card__bio"> Software doesn't exist in a vacuum. It needs a database, firewalls, electro-conspicutators and many other components that form the bigger picture. You need someone that knows what the heck they're talking about here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding: 0px 40px 0px 40px;">
+                    <div class="col-6 service-card-container">
+                        <div class="card" data-effect="zoom">
+                            <figure  class="card__image">
+                                <img src="http://digitalmarketingdeal.com/blog/wp-content/uploads/2019/01/BH_E1-Garver.jpg" alt="Short description">
+                            </figure>
+                            <div class="card__header">
+                                <figure class="card__profile">
+                                    <img src="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/images/api.svg" alt="Short description">
+                                </figure>
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__name">API Design & Development</h3>
+                                <p class="card__bio">It sounds technical, and it is. Your customers (might) love you more if you give them a way to interact with your software with their software. Whether it's REST, GraphQL or SOAP, look no further, I'm the API whisperer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 service-card-container">
+                        <div class="card" data-effect="zoom">
+                            <figure  class="card__image">
+                                <img src="https://www.milesweb.in/blog/wp-content/uploads/2016/11/dbms-database-management-system.png" alt="Short description">
+                            </figure>
+                            <div class="card__header">
+                                <figure class="card__profile">
+                                    <img src="/home/anubhav/Desktop/otherspace/my_work/anubhav_portfolio/images/servers.svg" alt="Short description">
+                                </figure>
+                            </div>
+                            <div class="card__body">
+                                <h3 class="card__name">Database Handling</h3>
+                                <p class="card__bio">Data is everywhere and its the new gold but what about the preservation and security of the data. Well no doubt you have to get the database and the person to handle the database and make it so secure so that your customer will relay on you for the storing of data on purpose.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Current Project -->
-        <!-- <section id="current-project">
-            <div class="current-project-header animated slide-in-left">
-                <h1 class="my-text">Current Project</h1>
+        <section id="current-project">
+            <div class="container flex">
+                <div class="header waypoint my-text" data-animation="slide-in-left">
+                    PROJECTS
+                </div>
+                <div
+                    class="header-bar waypoint"
+                    data-animation="slide-in-left"
+                    data-delay=".5s"
+                ></div>
             </div>
-        </section> -->
+
+            <div class="filter-wrap waypoint" data-animation="fade-in">
+            <div class="flex row">
+                <div class="filter" data-filter="all">ALL</div>
+                <div class="filter" data-filter=".rails">RUBY/RAILS</div>
+                <div class="filter" data-filter=".react">REACT-JS</div>
+                <div class="filter" data-filter=".js">JAVASCRIPT</div>
+            </div>
+            <div class="float-bar">
+                <div class="flex row">
+                <div class="filter" data-filter="all">ALL</div>
+                <div class="filter" data-filter=".rails">RUBY/RAILS</div>
+                <div class="filter" data-filter=".react">REACT-JS</div>
+                <div class="filter" data-filter=".js">JAVASCRIPT</div>
+                </div>
+            </div>
+            </div>
+
+            <div id="gallery" class="container flex row wrap waypoint">
+            <div class="mix react" data-my-order="1">
+                <div>
+                <div class="card_pro"></div>
+                <div class="text">
+                    <div class="bold">ChowNow Ordering</div>
+                    <span class="highlight">React JS / Python</span>
+                </div>
+                <div class="button" id="ordering">LEARN MORE</div>
+                </div>
+            </div>
+
+            <div class="mix react" data-my-order="1">
+                <div>
+                <div class="card_pro"></div>
+                <div class="text">
+                    <div class="bold">ChowNow Discover</div>
+                    <span class="highlight">React JS / Python</span>
+                </div>
+                <div class="button" id="discover">LEARN MORE</div>
+                </div>
+            </div>
+
+            <div class="mix react" data-my-order="1">
+                <div>
+                <div class="card_pro"></div>
+                <div class="text">
+                    <div class="bold">New Relic</div>
+                    <span class="highlight">React / Ruby on Rails / AEM</span>
+                </div>
+                <div class="button" id="newrelic">LEARN MORE</div>
+                </div>
+            </div>
+
+            <div class="mix js" data-my-order="1">
+                <div>
+                <div class="card_pro"></div>
+                <div class="text">
+                    <div class="bold">Roambi</div>
+                    <span class="highlight">JavaScript</span>
+                </div>
+                <div class="button" id="roambi">LEARN MORE</div>
+                </div>
+            </div>
+
+            <div class="mix rails" data-my-order="1">
+                <div>
+                <div class="card_pro"></div>
+                <div class="text">
+                    <div class="bold">Walker Tracker</div>
+                    <span class="highlight">JS / Ruby on Rails</span>
+                </div>
+                <div class="button" id="walker">LEARN MORE</div>
+                </div>
+            </div>
+
+            <div class="mix js" data-my-order="1">
+                <div>
+                <div class="card_pro"></div>
+                <div class="text">
+                    <div class="bold">MY STAND</div>
+                    <span class="highlight">JS / Node.js on Sails</span>
+                </div>
+                <div class="button" id="mystand">LEARN MORE</div>
+                </div>
+            </div>
+
+            <div class="mix js" data-my-order="1">
+                <div>
+                <div class="card_pro"></div>
+                <div class="text">
+                    <div class="bold">NEVER SURRENDER</div>
+                    <span class="highlight">JavaScript</span>
+                </div>
+                <div class="button" id="never">LEARN MORE</div>
+                </div>
+            </div>
+
+            <div class="mix rails" data-my-order="1">
+                <div>
+                <div class="card_pro"></div>
+                <div class="text">
+                    <div class="bold">Powur</div>
+                    <span class="highlight">Angular / Ruby on Rails</span>
+                </div>
+                <div class="button" id="powur">LEARN MORE</div>
+                </div>
+            </div>
+
+            <div class="mix js" data-my-order="1">
+                <div>
+                <div class="card_pro"></div>
+                <div class="text">
+                    <div class="bold">The Mall</div>
+                    <span class="highlight">React.js / Node</span>
+                </div>
+                <div class="button" id="themall">LEARN MORE</div>
+                </div>
+            </div>
+            </div>
+        </section>
 
         <!-- Open Source -->
         <!-- <section id="open-source">
@@ -122,3 +443,7 @@
 <script src="script/canvas.js"></script>
 <script src="script/model.js"></script>
 <script src="script/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
